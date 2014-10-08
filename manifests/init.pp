@@ -10,9 +10,11 @@ class install_mysql_server (
 
   class {'::mysql::server':
     root_password => $root_password,
-    data_dir => $data_dir,
     override_options => {
-      'mysqld' => {'innodb_buffer_pool_size' => $innodb_buffer_pool_size}
+      'mysqld' => {
+          'innodb_buffer_pool_size' => $innodb_buffer_pool_size,
+          'datadir' => $data_dir
+        }
     }
   }
 
