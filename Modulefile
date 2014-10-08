@@ -1,0 +1,7 @@
+name "puppetlabs-mysql-server"
+version "0.0.1"
+source "git://github.com/alessani/puppet-mysql-server"
+author "Matteo Alessani"
+license "Apache"
+summary "Manage mysql server"
+description "Manage mysql server"
